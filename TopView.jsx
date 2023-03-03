@@ -1,30 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { useEffect, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { StatusBar } from "expo-status-bar";
+import { useEffect, useState } from "react";
+import { StyleSheet, Text, View } from "react-native";
+import Button from "./Button";
+import Header from "./Header";
+// import Bar from "./Bar";
 export default function TopView(props) {
+  //when props.backbutton is true, show the button component  else don't show it
 
-    if(props.backbutton==true){
-        return (
-            <View style={styles.container}>
-                <Text style={{fontSize:40}}> I am TRUE </Text>
-            </View>
-          );
-    }else{
-        return (
-            <View style={styles.container}>
-                <Text style={{fontSize:40}}> I am False </Text>
-            </View>
-          );
-    }
-       
-    }
-  
+  return (
+    <View>
+      <Header />
+    </View>
+  );
+}
+
 const styles = StyleSheet.create({
   container: {
-    flex: 0.1,
-    backgroundColor: 'green',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex: 0.4,
+    backgroundColor: "green",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
